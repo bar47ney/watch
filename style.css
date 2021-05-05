@@ -1,0 +1,110 @@
+#main{
+    position: relative;
+    left: 25%;
+    width: 700px;
+    height: 700px;
+    background-color: floralwhite;
+    border: 4px solid gray;
+    border-radius: 50%;
+    transform: rotate(-90deg);
+}
+
+#stop{
+    position: absolute;
+    left: 70%;
+    top: 47%;
+    transform: rotate(90deg);
+    font-family: "Century Gothic";
+    font-weight: bold;
+}
+
+#circle{
+    position: absolute;
+    left: 47%;
+    top: 48%;
+    width: 40px;
+    height: 40px;
+    background-color: bisque;
+    border: 2px solid gray;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+#hourArrow, #minuteArrow, #secondArrow{
+    position: absolute;
+    left: 20%;
+    top: 49.9%;
+    width: 440px;
+    height: 15px;
+    animation: arrow 6s infinite linear;
+}
+
+#minuteArrow{
+    left: 5%;
+    top: 50.25%;
+    width: 630px;
+    height: 11px;
+    animation: arrow 4s infinite linear;
+}
+
+#secondArrow{
+    left: 1%;
+    top: 50.5%;
+    width: 690px;
+    height: 7px;
+    animation: arrow 60s infinite steps(60, end);
+}
+
+#hourArrow div{
+    width: 48%;
+    height: 100%;
+    background-color: bisque;
+    border: 2px solid gray;
+    border-radius: 20%;
+}
+
+#minuteArrow div{
+    width: 48%;
+    height: 100%;
+    background-color: orange;
+    border: 2px solid gray;
+    border-radius: 40%;
+}
+
+#secondArrow div{
+    width: 48%;
+    height: 100%;
+    background-color: blueviolet;
+    border: 2px solid gray;
+    border-radius: 45%;
+}
+
+#oneTailMa, #oneTailHa, #oneTailSa{
+    display: none;
+    float: left;
+}
+
+#twoTailMa, #twoTailHa, #twoTailSa{
+    float: right;
+}
+
+@keyframes arrow {
+    from {
+
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+#main:hover #hourArrow{
+    animation-play-state: paused;
+}
+
+#main:hover #minuteArrow{
+    animation-play-state: paused;
+}
+
+#main:hover #secondArrow{
+    animation-play-state: paused;
+}
